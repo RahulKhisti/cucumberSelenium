@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "C:/Users/Rahul/IdeaProjects/cucumberSelenium/src/main/java/features/simpleFormDemo.feature",
+        features = "C:/git/cucumberSelenium/src/test/java/features/simpleFormDemo.feature",
         glue= "stepdefinations"
 )
 

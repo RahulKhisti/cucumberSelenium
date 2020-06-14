@@ -1,5 +1,6 @@
 package util;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,10 +15,10 @@ public class TestBase {
     public static WebDriver driver;
     public static Properties props;
 
-    public TestBase() {
+    public static void inItProp() {
         props = new Properties();
         try {
-            FileInputStream fl = new FileInputStream("git/cucumberSelenium/src/test/java/config/config.properties");
+            FileInputStream fl = new FileInputStream("C:/git/cucumberSelenium/src/test/java/config/config.properties");
             props.load(fl);
 
         } catch (IOException e) {
@@ -25,14 +26,18 @@ public class TestBase {
         }
     }
     public static void initialize(){
+        if(props==null)
+            inItProp();
         String browserName= props.getProperty("browser");
         if (browserName.equals("chrome")){
-            System.setProperty("webdriver.driver.chromedriver","/Users/Rahul/Downloads/chromedriver_win32/chromedriver");
+            System.setProperty("webdriver.chrome.driver","c:/Users/Rahul/Downloads/chromedriver_win32/chromedriver.exe");
             driver= new ChromeDriver();
 
         }
+
         driver.get(props.getProperty("url"));
         driver.manage().window().maximize();
+        driver.findElement(By.id("at-cv-lightbox-close")).click();
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 

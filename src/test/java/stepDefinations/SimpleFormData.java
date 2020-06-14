@@ -6,7 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class InputFormData {
+public class SimpleFormData {
 
 @Given("user is at home page of a website")
     public void user_is_at_home_page_of_a_website () {

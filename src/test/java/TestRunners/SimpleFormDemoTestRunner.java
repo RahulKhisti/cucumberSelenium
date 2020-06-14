@@ -6,12 +6,12 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "C:/Users/Rahul/IdeaProjects/cucumberSelenium/src/main/java/features/inputForms.feature",
+        features = "C:/Users/Rahul/IdeaProjects/cucumberSelenium/src/main/java/features/simpleFormDemo.feature",
         glue= "stepDefinations"
 )
 
 
-public class InputFormsTestRunner {
+public class SimpleFormDemoTestRunner {
 
 
 

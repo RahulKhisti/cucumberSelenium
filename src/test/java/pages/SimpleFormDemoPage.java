@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import util.TestBase;
 
-public class SimpleFormDemo extends TestBase {
+public class SimpleFormDemoPage extends TestBase {
 
     @FindBy(xpath = "//input[@id='user-message']")
     WebElement enterMessage;
@@ -16,7 +16,7 @@ public class SimpleFormDemo extends TestBase {
     @FindBy(id="display")
     WebElement displayMessage;
 
-    public SimpleFormDemo(){
+    public SimpleFormDemoPage(){
 
         PageFactory.initElements(driver,this);
     }

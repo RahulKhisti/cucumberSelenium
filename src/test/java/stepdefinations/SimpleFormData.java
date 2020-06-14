@@ -17,7 +17,7 @@ public class SimpleFormData  {
 
     @Given("user is at home page of a website")
         public void user_is_at_home_page_of_a_website () {
-        TestBase.initialize();
+        TestBase.initialize("url");
     }
     @When("user enters text {string} in EnterMessage Box")
     public void userEntersTextInEnterMessageBox(String message) {

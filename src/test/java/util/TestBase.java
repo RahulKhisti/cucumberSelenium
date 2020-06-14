@@ -25,7 +25,7 @@ public class TestBase {
             e.printStackTrace();
         }
     }
-    public static void initialize(){
+    public static void initialize(String url){
         if(props==null)
             inItProp();
         String browserName= props.getProperty("browser");
@@ -35,9 +35,9 @@ public class TestBase {
 
         }
 
-        driver.get(props.getProperty("url"));
+        driver.get(props.getProperty(url));
         driver.manage().window().maximize();
-        driver.findElement(By.id("at-cv-lightbox-close")).click();
+      //  driver.findElement(By.id("at-cv-lightbox-close")).click();
         driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 

@@ -30,4 +30,7 @@ public class SimpleFormDemoPage extends TestBase {
         return displayMessage.getText();
     }
 
+    public void closeBrowser() {
+        driver.close();
+    }
 }
